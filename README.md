@@ -1,9 +1,9 @@
 # Login Server in Rust (Academic Project)
 
-<img src="https://img.shields.io/badge/Rust-2021-orange.svg" alt="Rust 2021">
-<img src="https://img.shields.io/badge/license-AGPL--3.0-blue.svg" alt="AGPL-3.0 License">
-<img src="https://img.shields.io/badge/status-academic--only-red.svg" alt="Academic Only">
-<img src="https://img.shields.io/badge/build-cargo-green.svg" alt="Cargo Build">
+![Rust 2021](https://img.shields.io/badge/Rust-2021-orange.svg)
+![AGPL-3.0 License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
+![Academic Only](https://img.shields.io/badge/status-academic--only-red.svg)
+![Cargo Build](https://img.shields.io/badge/build-cargo-green.svg)
 
 ## Project
 
