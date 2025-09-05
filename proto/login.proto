@@ -1,0 +1,32 @@
+syntax = "proto3";
+package login;
+
+message LoginRequest {
+  string account = 1;
+  string password = 2;
+  string ip = 3;
+}
+
+message Character {
+  string name = 1;
+  int32 level = 2;
+  string vocation = 3;
+}
+
+message World {
+  string name = 1;
+  string ip = 2;
+  uint32 port = 3;
+  string location = 4;
+}
+
+message LoginReply {
+  bool ok = 1;
+  string message = 2;
+  repeated Character characters = 3;
+  World world = 4;
+}
+
+service Login {
+  rpc Login (LoginRequest) returns (LoginReply);
+}

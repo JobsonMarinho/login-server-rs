@@ -1,0 +1,35 @@
+services:
+  login:
+    build: .
+    image: login-server-rs:latest
+    env_file: .env
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    ulimits:
+      nofile:
+        soft: 200000
+        hard: 200000
+    depends_on:
+      - mariadb
+      - redis
+  # MariaDB service
+  mariadb:
+    image: mariadb:12
+    environment:
+      MARIADB_DATABASE: otserv
+      MARIADB_USER: otuser
+      MARIADB_PASSWORD: otpass
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    command:
+      [
+        "--character-set-server=utf8mb4",
+        "--collation-server=utf8mb4_unicode_ci",
+      ]
+  # Redis service
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
